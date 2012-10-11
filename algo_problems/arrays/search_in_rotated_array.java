@@ -1,3 +1,17 @@
+/*
+Problem : Searching in rotated array.
+   A sorted int array is rotated r(n can be anything and can change) times. Search for a number in it.
+   What rotation means:
+   Input array : 3, 5, 6, 10, 11, 12
+   2 Rotated Array : 11, 12, 3, 5, 6, 10
+
+@Author : Anupam Sharma
+
+This problem is very simple but writing a running code which is taking care of all the cases is somewhat tricky 
+(or it is tricky atleast for me...)....
+
+
+*/
 import java.util.*;
 
 public class rotation {
