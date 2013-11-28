@@ -21,12 +21,14 @@ def get_primes(n):
                 primes[i] = False
         count = count + 1
     return primes
-count = 0
-print "prime Numbers"
-for i in get_primes(28):
-    if i: sys.stdout.write(str(count) + " ")
-    count = count + 1
-print "\nend" 
+
+def get_prime_numbers(n):
+    count = 0
+    primes = []
+    for i in get_primes(n):
+        if i: primes.append(count)
+        count = count + 1
+    return primes
 
 def gcd(a, b):
     """
