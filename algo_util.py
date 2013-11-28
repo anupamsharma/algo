@@ -1,6 +1,25 @@
 import math
 import sys
 
+def get_binomial_coeffs_matrix(n):
+    """
+    It returns the matrix a[n+1][n+1] containing binomial coefficient for a[i][j] for i>=j.
+    """
+    max_n =   n + 1
+    b_coeff = [range(0, max_n) for i in range(0, max_n) ]
+    b_coeff[0][0] = 1
+    b_coeff[1][1] = 1
+    b_coeff[1][0] = 1
+    for i in range(1, max_n):
+        max_j = i
+        b_coeff[i][0] = 1
+        b_coeff[i][i] = 1
+        for j in range(1, max_j):
+            b_coeff[i][j] = b_coeff[i-1][j-1] + b_coeff[i-1][j]  
+            b_coeff[i][j] = b_coeff[i][j] % NUMBER
+    return b_coeff
+
+
 def get_primes(n):
     """
     Returns a n+1 length boolean list a indicating if i is prime by value of a[i]. It usage Sieve of Eratosthenes for
@@ -22,6 +41,8 @@ def get_primes(n):
         count = count + 1
     return primes
 
+
+
 def get_prime_numbers(n):
     count = 0
     primes = []
@@ -29,6 +50,7 @@ def get_prime_numbers(n):
         if i: primes.append(count)
         count = count + 1
     return primes
+
 
 def gcd(a, b):
     """
