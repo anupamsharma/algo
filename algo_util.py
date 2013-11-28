@@ -70,3 +70,11 @@ def lcm(a, b):
 
     """
     return (a*b) / gcd(a, b)
+
+def get_lattice_polygon_area(inside_points, boundary_points):
+    """
+    Calculates area of lattice polygon based on Pick's Theorem.
+
+    """
+    
+    return inside_points + (boundary_points / 2) - 1
