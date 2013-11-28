@@ -78,3 +78,19 @@ def get_lattice_polygon_area(inside_points, boundary_points):
     """
     
     return inside_points + (boundary_points / 2) - 1
+
+
+def intersect_of_two_rectangles(rect1_b_l, rect1_t_r, rect2_b_l, rect2_t_r,:
+    """
+    This function returns the intersect of two rectangles if rectangles intersects otherwise None.
+    Rectangle should be represented as bottom left and right top. 
+
+    """
+    b_l = (max(rect1_b_l[0], rect2_b_l[0]), max(rect1_b_l[1], rect2_b_l[1])
+    t_r = (max(rect1_t_r[0], rect2_t_r[0]), max(rect1_t_r[1], rect2_t_r[1])
+    if (t_r[0] > b_l[0] and t_r[1] > b_l[1]):
+        return (b_l, t_r)
+    return None
+        
+    
+    
