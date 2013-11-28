@@ -62,3 +62,11 @@ def gcd(a, b):
         return x2
     else:
         return gcd(x2, rem)
+
+
+def lcm(a, b):
+    """
+    Calculates LCM of a and b.
+
+    """
+    return (a*b) / gcd(a, b)
